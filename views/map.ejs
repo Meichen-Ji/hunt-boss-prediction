@@ -10,14 +10,14 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="/record/1">Stillwater Bayou</a></li>
-            <li><a href="/record/2">Lawson Delta</a></li>
-            <li><a href="/record/3">DeSalle</a></li>
+            <li><a href="/record/1">Stillwater Bayou 河口</a></li>
+            <li><a href="/record/2">Lawson Delta 三角洲</a></li>
+            <li><a href="/record/3">DeSalle 德萨莱</a></li>
         </ul>
     </nav>
 
 <div class="map">
-  <h1>Map <%= mapNumber %></h1>
+  <h1 id="map-num">Map <%= mapNumber %></h1>
   <h1><%= mapName %></h1>
   <div class="map-pieces">
       <% mapPieces.forEach(piece => { %>
@@ -30,6 +30,6 @@
   </div>
 </div>
 
-<script src="/scripts/main.js"></script>
+<script src="/scripts/record.js"></script>
 </body>
 </html>

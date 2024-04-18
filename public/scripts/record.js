@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pieces = document.querySelector('.map-pieces');
     const piecesArr = Array.from(pieces.children);
     const resetBtn = document.getElementById('resetBtn');
+    const mapNum = document.getElementById('map-num').textContent;
 
 
     pieces.addEventListener('click', function (event) {
@@ -43,6 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('okBtn').addEventListener('click', function () {
         const selectedPieces = document.querySelectorAll('.map-piece');
         const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 0 : 1);
-        alert(`Selected pieces array: [${selectedArray}]`);
+        alert(`${mapNum}\nSelected pieces array: [${selectedArray}]`);
     });
 });
