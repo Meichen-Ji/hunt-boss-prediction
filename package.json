@@ -2,8 +2,9 @@
   "name": "hunt-map-prediction",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.mjs",
   "scripts": {
+    "start": "node app.mjs",
     "http-server": "npx http-server -p 9001",
     "dev": "vite",
     "build": "vite build",
@@ -20,9 +21,14 @@
     "clean-all": "npm run clean && rm -rf node_modules/ && rm -f package-lock.json"
   },
   "keywords": [],
-  "author": "",
+  "authors": [
+    "Meichen Ji",
+    "Yan Song"
+  ],
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "path": "^0.12.7"
   }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Selection</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="map">
+  <h1>Map <%= mapNumber %></h1>
+  <div class="map-pieces">
+      <% mapPieces.forEach(piece => { %>
+          <img class="map-piece" src="<%= piece.image %>" alt="<%= piece.id %>" data-id="<%= piece.id %>">
+      <% }); %>
+  </div>
+  <div class="buttons-container">
+      <button id="okBtn">OK</button>
+      <button id="resetBtn">Reset</button>
+  </div>
+</div>
+
+<script src="/scripts/main.js"></script>
+</body>
+</html>
