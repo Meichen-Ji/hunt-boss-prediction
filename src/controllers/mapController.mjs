@@ -10,12 +10,27 @@ export const mapController = {
       res.status(404).send('Map not found');
       return;
     }
+    
+    let mapName = '';
+    let piecePrefix = '';
+    if (mapNumber === '1') {
+      mapName = 'Stillwater Bayou';
+      piecePrefix = 'SB';
+    } else if (mapNumber === '2') {
+      mapName = 'Lawson Delta';
+      piecePrefix = 'LD';
+    } else if (mapNumber === '3') {
+      mapName = 'DeSalle';
+      piecePrefix = 'DS';
+    }
+
     const mapPieces = [];
     for (let i = 1; i <= NUM_PIECES_PER_MAP; i++) {
-      const pieceId = `SB${i.toString().padStart(2, '0')}`;
+      const pieceId = `${piecePrefix}${i.toString().padStart(2, '0')}`;
       const piece = new MapPiece(pieceId, `/images/map${mapNumber}/${pieceId}.png`);
       mapPieces.push(piece);
     }
-    res.render('map', { mapNumber, mapPieces});
+    
+    res.render('map', { mapNumber, mapName, mapPieces});
   }
 };

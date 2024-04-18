@@ -5,34 +5,65 @@ body {
   padding: 0;
 }
 
+/* CSS for the navigation bar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  text-align: center; /* Center the text */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block; /* Display the list horizontally */
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  display: inline-block; /* Display the links horizontally */
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
 .map {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 
-h1 {
-  margin-top: 20px;
-  color: #4CAF50;
+.map h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 
 .map-pieces {
   position: relative;
-  width: 808px; /* Adjust as needed */
-  height: 808px; /* Adjust as needed */
-  margin: 2% auto; /* Adjust as needed */
+  width: 808px; 
+  height: 808px; 
+  margin: 2% auto; 
 }
 
 .map-piece {
   position: absolute;
-  width: 100%; /* Take up full width of parent */
-  height: 100%; /* Take up full height of parent */
+  width: 100%; 
+  height: 100%; 
   cursor: pointer;
   transition: filter 0.3s;
 }
 
-/* Optional: Center the map pieces within the container */
 .map-piece {
   top: 50%;
   left: 50%;
@@ -54,11 +85,13 @@ button#okBtn {
   background-color: #4CAF50;
   color: white;
   border: none;
-  margin-right: 10px; /* Add some space between the buttons */
+  font-size: 30px; /* Increased font size */
+  margin-right: 20px; /* Add some space between the buttons */
 }
 
 button#resetBtn {
   background-color: #f44336;
   color: white;
   border: none;
+  font-size: 30px; /* Increased font size */
 }

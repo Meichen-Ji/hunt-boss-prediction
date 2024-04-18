@@ -8,8 +8,17 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <ul>
+            <li><a href="/map/1">Stillwater Bayou</a></li>
+            <li><a href="/map/2">Lawson Delta</a></li>
+            <li><a href="/map/3">DeSalle</a></li>
+        </ul>
+    </nav>
+
 <div class="map">
   <h1>Map <%= mapNumber %></h1>
+  <h1><%= mapName %></h1>
   <div class="map-pieces">
       <% mapPieces.forEach(piece => { %>
           <img class="map-piece" src="<%= piece.image %>" alt="<%= piece.id %>" data-id="<%= piece.id %>">

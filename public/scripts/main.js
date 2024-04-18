@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    
 
     resetBtn.addEventListener('click', function () {
         piecesArr.forEach(piece => {
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('okBtn').addEventListener('click', function () {
         const selectedPieces = document.querySelectorAll('.map-piece');
-        const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 1 : 0);
+        const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 0 : 1);
         alert(`Selected pieces array: [${selectedArray}]`);
     });
 });
