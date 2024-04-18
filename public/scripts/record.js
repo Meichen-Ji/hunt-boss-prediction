@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const piecesArr = Array.from(pieces.children);
     const resetBtn = document.getElementById('resetBtn');
     const mapNum = document.getElementById('map-num').textContent;
+    const showSelectedArr = document.querySelector('.selected-array');
 
 
     pieces.addEventListener('click', function (event) {
@@ -39,11 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
         piecesArr.forEach(piece => {
             piece.classList.remove('selected');
         });
+        showSelectedArr.innerHTML = '<br>';
     });
 
     document.getElementById('okBtn').addEventListener('click', function () {
         const selectedPieces = document.querySelectorAll('.map-piece');
         const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 0 : 1);
-        alert(`${mapNum}\nSelected pieces array: [${selectedArray}]`);
+        
+        // display the selected pieces array at the bottom of the page 
+        // alert(`${mapNum}\nSelected pieces array: [${selectedArray}]`);
+        showSelectedArr.textContent = `${mapNum}; Selected pieces array: [${selectedArray}]`;
     });
 });
