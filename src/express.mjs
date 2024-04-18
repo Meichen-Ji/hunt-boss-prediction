@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/map/:mapNumber', mapController.getMap);
+app.get('/record/:mapNumber', mapController.getMap);
 
 export default (port = process.env.PORT || 3000) => {
   app.listen(port, () => {
