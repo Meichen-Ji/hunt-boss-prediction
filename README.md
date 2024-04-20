@@ -1,5 +1,5 @@
 # hunt-boss-prediction
-### Authors: Meichen Ji and Yan Song
+Authors: Meichen Ji and Yan Song
 ### A simple tool to predict boss position in the game Hunt: Showdown
 
 ### Todo list
