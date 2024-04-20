@@ -1,5 +1,6 @@
 # hunt-boss-prediction
-### A simple tool to predict the boss in the game Hunt: Showdown
+### Authors: Meichen Ji and Yan Song
+### A simple tool to predict boss position in the game Hunt: Showdown
 
 ### Todo list
 - [x] Create a simple webpage to record data from game (locally)
