@@ -25,7 +25,7 @@ export const mapController = {
     }
 
     const mapPieces = [];
-    for (let i = 1; i <= NUM_PIECES_PER_MAP; i++) {
+    for (let i = 0; i < NUM_PIECES_PER_MAP; i++) {
       const pieceId = `${piecePrefix}${i.toString().padStart(2, '0')}`;
       const piece = new MapPiece(pieceId, `/images/map${mapNumber}_${piecePrefix}/${pieceId}.png`);
       mapPieces.push(piece);
