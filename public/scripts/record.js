@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedPieces = document.querySelectorAll('.map-piece');
         const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 0 : 1);
         
-        // display the selected pieces array at the bottom of the page 
+        // display the selected pieces array at the bottom of the page, separated by underscores
+
         // alert(`${mapNum}\nSelected pieces array: [${selectedArray}]`);
-        dataGreyArr.textContent = `[${selectedArray}]`;
+        dataGreyArr.textContent = selectedArray.join('_');
         cleanUpSelected();
     });
 

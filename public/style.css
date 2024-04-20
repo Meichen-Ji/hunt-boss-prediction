@@ -96,6 +96,6 @@ button#resetBtn {
   font-size: 30px; /* Increased font size */
 }
 
-.data-mapnum, .data-grey, .data-bossloc {
+.data-mapnum, .data-grey, .data-bossloc, .data-uploader {
   display: inline
 }
