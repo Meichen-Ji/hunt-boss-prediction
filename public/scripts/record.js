@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const pieces = document.querySelector('.map-pieces');
     const piecesArr = Array.from(pieces.children);
     const resetBtn = document.getElementById('resetBtn');
-    const mapNum = document.getElementById('map-num').textContent;
-    const showSelectedArr = document.querySelector('.selected-array');
+
+    // display the selected data at the bottom of the page
+    const dataGreyArr = document.querySelector('.data-grey');
+    const dataBossloc = document.querySelector('.data-bossloc');
 
 
     pieces.addEventListener('click', function (event) {
@@ -37,18 +39,40 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     resetBtn.addEventListener('click', function () {
-        piecesArr.forEach(piece => {
-            piece.classList.remove('selected');
-        });
-        showSelectedArr.innerHTML = '<br>';
+        cleanUpSelected();
+        dataGreyArr.textContent = '';
+        dataBossloc.textContent = '';
     });
 
+    // select greyed out pieces
     document.getElementById('okBtn').addEventListener('click', function () {
         const selectedPieces = document.querySelectorAll('.map-piece');
         const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 0 : 1);
         
         // display the selected pieces array at the bottom of the page 
         // alert(`${mapNum}\nSelected pieces array: [${selectedArray}]`);
-        showSelectedArr.textContent = `${mapNum}; Selected pieces array: [${selectedArray}]`;
+        dataGreyArr.textContent = `[${selectedArray}]`;
+        cleanUpSelected();
     });
+
+    // select boss location
+    document.getElementById('okBtn2').addEventListener('click', function () {
+        // get index of selected pieces
+        const selectedPieces = document.querySelectorAll('.map-piece');
+        const selectedArray = Array.from(selectedPieces).map(piece => piece.classList.contains('selected') ? 1 : 0);
+        // check how many pieces are selected
+        if (selectedArray.filter(piece => piece === 1).length !== 1) {
+            dataBossloc.textContent = "0 or more than one piece selected";
+        } else {
+            const selectedIdx = selectedArray.indexOf(1);
+            dataBossloc.textContent = selectedIdx;
+        }
+        cleanUpSelected();
+    });
+
+    function cleanUpSelected() {
+        piecesArr.forEach(piece => {
+            piece.classList.remove('selected');
+        });
+    }
 });

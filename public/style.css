@@ -81,7 +81,7 @@ body {
   margin-bottom: 20px;
 }
 
-button#okBtn {
+button#okBtn, button#okBtn2 {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -94,4 +94,8 @@ button#resetBtn {
   color: white;
   border: none;
   font-size: 30px; /* Increased font size */
+}
+
+.data-mapnum, .data-grey, .data-bossloc {
+  display: inline
 }

@@ -17,7 +17,7 @@
     </nav>
 
 <div class="map">
-  <h1 id="map-num">Map <%= mapNumber %></h1>
+  <h1>Map <%= mapNumber %></h1>
   <h1><%= mapName %></h1>
   <div class="map-pieces">
       <% mapPieces.forEach(piece => { %>
@@ -25,10 +25,13 @@
       <% }); %>
   </div>
   <div class="buttons-container">
-      <button id="okBtn">OK</button>
+      <button id="okBtn">OK-greyed out</button>
+      <button id="okBtn2">OK-boss loc</button>
       <button id="resetBtn">Reset</button>
   </div>
-  <div class="selected-array"><br></div>
+  <div class="selected-data">
+    <div class="data-mapnum"><%= mapNumber %></div>,<div class="data-grey"></div>,<div class="data-bossloc"></div>
+  </div>
 </div>
 
 <script src="/scripts/record.js"></script>
