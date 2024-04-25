@@ -1,6 +1,12 @@
 # hunt-boss-prediction
 Authors: Meichen Ji and Yan Song
 ### A simple tool to predict boss position in the game Hunt: Showdown
+to run it:
+```
+npm install
+npm start
+```
+
 
 ### Todo list
 - [x] Create a simple webpage to record data from game (locally)
